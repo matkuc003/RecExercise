@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface PostDataRepository extends JpaRepository<PostData,Integer> {
     List<PostData> findAllByUserId(Integer userID);
-    List<PostData> findAllByUserIdAndTitle(Integer userID, String title);
+    List<PostData> findAllByTitle(String title);
 }

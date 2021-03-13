@@ -18,13 +18,13 @@ public class PostDataController {
     public ResponseEntity<Boolean> downloadData(){
         return postDataService.downloadData();
     }
-    @GetMapping("/displayPosts/{userID}")
+    @GetMapping("/displayPostsByUser/{userID}")
     public ResponseEntity<List<PostData>> displayPostsByUserID(@PathVariable Integer userID){
-        return postDataService.displayPostsUserId(userID);
+        return postDataService.displayPostsByUserId(userID);
     }
-    @GetMapping("/displayPosts/{userID}/{title}")
-    public ResponseEntity<List<PostData>> displayPostsByTitle(@PathVariable Integer userID, @PathVariable String title){
-        return postDataService.displayPostByTitle(userID,title);
+    @GetMapping("/displayPostsByTitle/{title}")
+    public ResponseEntity<List<PostData>> displayPostsByTitle(@PathVariable String title){
+        return postDataService.displayPostByTitle(title);
     }
     @DeleteMapping("/delete/{postID}")
     public ResponseEntity<Boolean> deletePostByPostID(@PathVariable Integer postID){

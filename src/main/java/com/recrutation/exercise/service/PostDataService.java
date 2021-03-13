@@ -36,7 +36,7 @@ public class PostDataService {
         }
     }
 
-    public ResponseEntity<List<PostData>> displayPostsUserId(Integer userID) {
+    public ResponseEntity<List<PostData>> displayPostsByUserId(Integer userID) {
         try {
             List<PostData> postDataList = postDataRepository.findAllByUserId(userID);
             return new ResponseEntity<>(postDataList, HttpStatus.OK);
@@ -48,9 +48,9 @@ public class PostDataService {
         }
     }
 
-    public ResponseEntity<List<PostData>> displayPostByTitle(Integer userID, String title) {
+    public ResponseEntity<List<PostData>> displayPostByTitle(String title) {
         try {
-            List<PostData> postDataList = postDataRepository.findAllByUserIdAndTitle(userID, title);
+            List<PostData> postDataList = postDataRepository.findAllByTitle(title);
             return new ResponseEntity<>(postDataList, HttpStatus.OK);
         } catch (Exception ex) {
             {
