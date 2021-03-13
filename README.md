@@ -1,6 +1,7 @@
 #Instrukcja uruchomieniowa
 
-Do uruchomienia aplikacji wymagane są: Maven, JDK (wersja 11)
+Do uruchomienia aplikacji wymagane są: Maven, JDK (wersja 11).
+
 Baza danych stworzona jest w H2
 
 Uruchomienie aplikacji:
